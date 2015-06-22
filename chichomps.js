@@ -4,7 +4,8 @@
 angular.module('chichomps', ['ngRoute'])
   .controller('eventsController', function($http, $scope) {
     $http.get(
-      'http://127.0.0.1:5000/api/v1.0/events',
+      // 'http://127.0.0.1:5000/v1.0/events',
+      'http://chichomps.com/api/v1.0/events',
       {
         headers: {'Authorization': 'Basic YWRhbXlhbGE6QnVpbHQgd2l0aCBsb3ZlIGluIENoaWNhZ28h'}
       }).
