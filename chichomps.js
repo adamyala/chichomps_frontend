@@ -4,8 +4,8 @@
 angular.module('chichomps', ['ngRoute'])
   .controller('eventsController', function($http, $scope) {
     $http.get(
-      // 'http://127.0.0.1:5000/v1.0/events',
-      'http://chichomps.com/api/v1.0/events',
+      'http://127.0.0.1:5000/v1.0/events',
+      // 'http://chichomps.com/api/v1.0/events',
       {
         headers: {'Authorization': 'Basic YWRhbXlhbGE6QnVpbHQgd2l0aCBsb3ZlIGluIENoaWNhZ28h'}
       }).
@@ -15,6 +15,8 @@ angular.module('chichomps', ['ngRoute'])
       }).
       error(function(data, status, headers, config) {}
     );
+
+    $scope.cityIncludes = [];
  
     $scope.cityList = function(events) {
       var cities = [];
@@ -26,7 +28,6 @@ angular.module('chichomps', ['ngRoute'])
       return cities.sort();
     };
 
-    $scope.cityIncludes = [];
     $scope.includeCity = function(city) {
       var i = $.inArray(city, $scope.cityIncludes);
       if (i > -1) {
@@ -48,7 +49,6 @@ angular.module('chichomps', ['ngRoute'])
     $routeProvider
      .when('/', {
       templateUrl: 'events.html',
-      controller: 'eventsController',
     })
     .when('/about', {
       templateUrl: 'about.html',
