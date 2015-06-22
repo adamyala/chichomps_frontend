@@ -1,0 +1,40 @@
+<div class="event-deck">
+  <div ng-repeat="event in events | filter:cityFilter" class="event">
+    <div class="event-header">
+      <div class="event-name">{{event.name}}</div>
+      <div class="event-date">{{event.date}}</div>
+      <div ng-if="event.cost > 0" class="event-cost">${{event.cost}}</div>
+      <div ng-if="event.cost === 0" class="event-cost">Free</div>
+      <div ngif="event.cost === -1" class="event-cost">Donation</div>
+    </div>
+    <div class="event-descrip">{{event.description}}</div>
+    <div class="event-footer">
+      <img src="maps/{{event.id}}.png">
+      <div class="event-place">
+        <svg style="width:15px;height:20px;float:left" viewBox="0 0 24 24">
+          <path fill="#727272" d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
+        </svg>
+        {{event.place}}
+      </div>
+      <div class="event-address1">
+        &nbsp;&nbsp;&nbsp;
+        {{event.address1}} {{address2}}
+      </div>
+      <div class="event-address2">
+        &nbsp;&nbsp;&nbsp;
+        {{event.city}} {{event.state}}, {{event.zipcode}}
+      </div>
+      <div class="event-tags">
+        <svg style="width:15px;height:20px;float:left" viewBox="0 0 24 24">
+            <path fill="#727272" d="M5.5,7A1.5,1.5 0 0,1 4,5.5A1.5,1.5 0 0,1 5.5,4A1.5,1.5 0 0,1 7,5.5A1.5,1.5 0 0,1 5.5,7M21.41,11.58L12.41,2.58C12.05,2.22 11.55,2 11,2H4C2.89,2 2,2.89 2,4V11C2,11.55 2.22,12.05 2.59,12.41L11.58,21.41C11.95,21.77 12.45,22 13,22C13.55,22 14.05,21.77 14.41,21.41L21.41,14.41C21.78,14.05 22,13.55 22,13C22,12.44 21.77,11.94 21.41,11.58Z" />
+        </svg>
+        &nbsp;this, that, stuff
+      </div>
+    </div>
+    <a href="{{event.link}}" target="_blank" style='text-decoration:none;'>
+      <div class="event-button">
+        Get Tickets
+      </div>
+    </a>
+  </div>
+</div>

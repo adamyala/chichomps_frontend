@@ -1,0 +1,32 @@
+<div id="sidebar-wrapper" ng-controller="eventsController">
+  <ul class="sidebar-nav">
+    <li class="sidebar-brand">
+      <a href="#/">ChiChomps</a>
+    </li>
+    <li class="nav-li">
+      Filters (Coming soon...)
+    </li>
+    <li>
+      <ul>Cities
+        <li ng-repeat="city in cities">
+          <input ng-click="includeCity(city)" type="checkbox"/>{{city}}</br/>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <ul>Category
+      </ul>
+    </li>
+    <li>
+      <ul>Cost
+      </ul>
+    </li>
+    <li>
+      <ul>Source
+      </ul>
+    </li>
+    <li class="nav-li">
+      <a href="#/about">About</a>
+    </li>
+  </ul>
+</div>

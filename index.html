@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="chichomps">
+  <head>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="angular-route.min.js"></script>
+    <script src="chichomps.js"></script>
+    <link rel="stylesheet" href="css/chichomps.css">
+  </head>
+  <body>
+    <div id="wrapper">
+    <div ng-include="'nav.html'"></div>
+      <div id="top-nav">
+        <div class="top-button" onClick="toggleMenu()">
+          <div class="top-button-bar">
+          </div>
+          <div class="top-button-bar">
+          </div>
+          <div class="top-button-bar">
+          </div>
+        </div>
+         <div>
+           ChiChomps
+         </div>
+      </div>
+      <div id="page-content-wrapper">
+        <div ng-view></div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    function toggleMenu() {
+      $("#wrapper").toggleClass("toggled");
+    }
+  </script>
+</html>
