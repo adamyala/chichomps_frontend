@@ -13,46 +13,104 @@
       <ul>
         <span class="filter-header">Cost</span>
         <li>
-          <input ng-model="costOptions.donation.flag" type="checkbox"/>Donation</br>
+          <div class="checkbox">
+            <label>
+              <input ng-model="costOptions.donation.flag" type="checkbox">
+              <span class="checkbox-material"><span class="check"></span></span> Donation
+            </label>
+          </div>
         </li>
         <li>
-          <input ng-model="costOptions.free.flag" type="checkbox"/>Free</br>
+          <div class="checkbox">
+            <label>
+              <input ng-model="costOptions.free.flag" type="checkbox">
+              <span class="checkbox-material"><span class="check"></span></span> Free
+            </label>
+          </div>
         </li>
         <li>
-          <input ng-model="costOptions.one.flag" type="checkbox"/>Free - $20</br>
+          <div class="checkbox">
+            <label>
+              <input ng-model="costOptions.one.flag" type="checkbox">
+              <span class="checkbox-material"><span class="check"></span></span> Free - $20
+            </label>
+          </div>
         </li>
         <li>
-          <input ng-model="costOptions.two.flag" type="checkbox"/>$20 - $40</br>
+          <div class="checkbox">
+            <label>
+              <input ng-model="costOptions.two.flag" type="checkbox">
+              <span class="checkbox-material"><span class="check"></span></span> $20 - $40
+            </label>
+          </div>
         </li>
         <li>
-          <input ng-model="costOptions.three.flag" type="checkbox"/>$40 - $100</br>
+          <div class="checkbox">
+            <label>
+              <input ng-model="costOptions.three.flag" type="checkbox">
+              <span class="checkbox-material"><span class="check"></span></span> $40 - $100
+            </label>
+          </div>
         </li>
         <li>
-          <input ng-model="costOptions.four.flag" type="checkbox"/>$100+</br>
+          <div class="checkbox">
+            <label>
+              <input ng-model="costOptions.four.flag" type="checkbox">
+              <span class="checkbox-material"><span class="check"></span></span> $100+
+            </label>
+          </div>
         </li>
       </ul>
     </li>
     <li>
       <ul><span class="filter-header">Category</span>
         <li ng-repeat="category in categories">
-          <input ng-click="includeCategory(category)" type="checkbox"/>{{category}}</br/>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-click="includeCategory(category)">
+              <span class="checkbox-material"><span class="check"></span></span> {{category}}
+            </label>
+          </div>
         </li>
       </ul>
     </li>
     <li>
       <ul><span class="filter-header">City</span>
         <li ng-repeat="city in cities">
-          <input ng-click="includeCity(city)" type="checkbox"/>{{city}}</br/>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-click="includeCity(city)">
+              <span class="checkbox-material"><span class="check"></span></span> {{city}}
+            </label>
+          </div>
         </li>
       </ul>
     </li>
     <li>
       <ul><span class="filter-header">Source</span>
         <li ng-repeat="source in sources">
-          <input ng-click="includeSource(source)" type="checkbox"/>{{source}}</br/>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" ng-click="includeSource(source)">
+              <span class="checkbox-material"><span class="check"></span></span> {{source}}
+            </label>
+          </div>
         </li>
       </ul>
     </li>
     <br><br><br><br><br><br><br><br><br><br><br>
   </ul>
 </div>
+      <div id="top-nav">
+        <div class="top-button" onClick="toggleMenu()">
+          <div class="top-button-bar">
+          </div>
+          <div class="top-button-bar">
+          </div>
+          <div class="top-button-bar">
+          </div>
+        </div>
+         <div>
+           ChiChomps
+         </div>
+      </div>

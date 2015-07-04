@@ -35,7 +35,7 @@ angular.module('chichomps', ['ngRoute'])
       } else {
           $scope.cityIncludes.push(city);
       }
-    }
+    };
     $scope.cityFilter = function(my_event) {
       if ($scope.cityIncludes.length > 0) {
         if ($.inArray(my_event.city, $scope.cityIncludes) < 0) {

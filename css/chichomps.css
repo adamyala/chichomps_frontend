@@ -2,6 +2,9 @@
 @import 'bootstrap.min.css';
 @import 'simple-sidebar.css';
 @import 'materialdesignicons.min.css';
+@import 'material-fullpalette.min.css';
+@import 'material.min.css';
+@import 'ripples.min.css';
 
 body {
   background-color: #B6B6B6;
@@ -24,6 +27,11 @@ body {
 
 .filter-header {
   font-size: 18px;
+}
+
+.checkbox {
+  margin-top: 1px;
+  margin-bottom: 1px;  
 }
 
 /* Event styling */
