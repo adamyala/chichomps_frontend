@@ -4,29 +4,55 @@
       <a href="#/">ChiChomps</a>
     </li>
     <li class="nav-li">
-      Filters (Coming soon...)
+      <a href="#/about">About</a>
+    </li>
+    <li class="nav-li">
+      Filters
     </li>
     <li>
-      <ul>Cities
+      <ul>
+        <span class="filter-header">Cost</span>
+        <li>
+          <input ng-model="costOptions.donation.flag" type="checkbox"/>Donation</br>
+        </li>
+        <li>
+          <input ng-model="costOptions.free.flag" type="checkbox"/>Free</br>
+        </li>
+        <li>
+          <input ng-model="costOptions.one.flag" type="checkbox"/>Free - $20</br>
+        </li>
+        <li>
+          <input ng-model="costOptions.two.flag" type="checkbox"/>$20 - $40</br>
+        </li>
+        <li>
+          <input ng-model="costOptions.three.flag" type="checkbox"/>$40 - $100</br>
+        </li>
+        <li>
+          <input ng-model="costOptions.four.flag" type="checkbox"/>$100+</br>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <ul><span class="filter-header">Category</span>
+        <li ng-repeat="category in categories">
+          <input ng-click="includeCategory(category)" type="checkbox"/>{{category}}</br/>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <ul><span class="filter-header">City</span>
         <li ng-repeat="city in cities">
           <input ng-click="includeCity(city)" type="checkbox"/>{{city}}</br/>
         </li>
       </ul>
     </li>
     <li>
-      <ul>Category
+      <ul><span class="filter-header">Source</span>
+        <li ng-repeat="source in sources">
+          <input ng-click="includeSource(source)" type="checkbox"/>{{source}}</br/>
+        </li>
       </ul>
     </li>
-    <li>
-      <ul>Cost
-      </ul>
-    </li>
-    <li>
-      <ul>Source
-      </ul>
-    </li>
-    <li class="nav-li">
-      <a href="#/about">About</a>
-    </li>
+    <br><br><br><br><br><br><br><br><br><br><br>
   </ul>
 </div>

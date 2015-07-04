@@ -22,6 +22,10 @@ body {
   color: white;
 }
 
+.filter-header {
+  font-size: 18px;
+}
+
 /* Event styling */
 .event-deck {
   margin-left: auto;
@@ -127,6 +131,7 @@ img {
 }
 
 .event-tags {
+  height: 20px;
   padding-left: 10px;
   padding-bottom: 10px;
   margin-top: 3px;
