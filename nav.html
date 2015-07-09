@@ -11,91 +11,102 @@
     </li>
     <li>
       <ul>
-        <span class="filter-header">Cost</span>
-        <li>
-          <div class="checkbox">
-            <label>
-              <input ng-model="costOptions.donation.flag" type="checkbox">
-              <span class="checkbox-material"><span class="check"></span></span> Donation
-            </label>
-          </div>
-        </li>
-        <li>
-          <div class="checkbox">
-            <label>
-              <input ng-model="costOptions.free.flag" type="checkbox">
-              <span class="checkbox-material"><span class="check"></span></span> Free
-            </label>
-          </div>
-        </li>
-        <li>
-          <div class="checkbox">
-            <label>
-              <input ng-model="costOptions.one.flag" type="checkbox">
-              <span class="checkbox-material"><span class="check"></span></span> Free - $20
-            </label>
-          </div>
-        </li>
-        <li>
-          <div class="checkbox">
-            <label>
-              <input ng-model="costOptions.two.flag" type="checkbox">
-              <span class="checkbox-material"><span class="check"></span></span> $20 - $40
-            </label>
-          </div>
-        </li>
-        <li>
-          <div class="checkbox">
-            <label>
-              <input ng-model="costOptions.three.flag" type="checkbox">
-              <span class="checkbox-material"><span class="check"></span></span> $40 - $100
-            </label>
-          </div>
-        </li>
-        <li>
-          <div class="checkbox">
-            <label>
-              <input ng-model="costOptions.four.flag" type="checkbox">
-              <span class="checkbox-material"><span class="check"></span></span> $100+
-            </label>
-          </div>
-        </li>
+        <details>
+          <summary>Cost</summary>
+          <li>
+            <div class="checkbox">
+              <label>
+                <input ng-model="costOptions.donation.flag" type="checkbox">
+                <span class="checkbox-material"><span class="check"></span></span> Donation
+              </label>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox">
+              <label>
+                <input ng-model="costOptions.free.flag" type="checkbox">
+                <span class="checkbox-material"><span class="check"></span></span> Free
+              </label>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox">
+              <label>
+                <input ng-model="costOptions.one.flag" type="checkbox">
+                <span class="checkbox-material"><span class="check"></span></span> $1 - $20
+              </label>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox">
+              <label>
+                <input ng-model="costOptions.two.flag" type="checkbox">
+                <span class="checkbox-material"><span class="check"></span></span> $20 - $40
+              </label>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox">
+              <label>
+                <input ng-model="costOptions.three.flag" type="checkbox">
+                <span class="checkbox-material"><span class="check"></span></span> $40 - $100
+              </label>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox">
+              <label>
+                <input ng-model="costOptions.four.flag" type="checkbox">
+                <span class="checkbox-material"><span class="check"></span></span> $100+
+              </label>
+            </div>
+          </li>
+        </details>
       </ul>
     </li>
     <li>
-      <ul><span class="filter-header">Category</span>
-        <li ng-repeat="category in categories">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" ng-click="includeCategory(category)">
-              <span class="checkbox-material"><span class="check"></span></span> {{category}}
-            </label>
-          </div>
-        </li>
+      <ul>
+        <details>
+          <summary>Category</summary>
+          <li ng-repeat="category in categories">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" ng-click="includeCategory(category)">
+                <span class="checkbox-material"><span class="check"></span></span> {{category}}
+              </label>
+            </div>
+          </li>
+        </details>
       </ul>
     </li>
     <li>
-      <ul><span class="filter-header">City</span>
-        <li ng-repeat="city in cities">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" ng-click="includeCity(city)">
-              <span class="checkbox-material"><span class="check"></span></span> {{city}}
-            </label>
-          </div>
-        </li>
+      <ul>
+        <details>
+          <summary>City</summary>
+          <li ng-repeat="city in cities">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" ng-click="includeCity(city)">
+                <span class="checkbox-material"><span class="check"></span></span> {{city}}
+              </label>
+            </div>
+          </li>
+        </details>
       </ul>
     </li>
     <li>
-      <ul><span class="filter-header">Source</span>
-        <li ng-repeat="source in sources">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" ng-click="includeSource(source)">
-              <span class="checkbox-material"><span class="check"></span></span> {{source}}
-            </label>
-          </div>
-        </li>
+      <ul>
+        <details>
+          <summary>Source</summary>
+          <li ng-repeat="source in sources">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" ng-click="includeSource(source)">
+                <span class="checkbox-material"><span class="check"></span></span> {{source}}
+              </label>
+            </div>
+          </li>
+        </details>
       </ul>
     </li>
     <br><br><br><br><br><br><br><br><br><br><br>

@@ -108,31 +108,37 @@ angular.module('chichomps', ['ngRoute'])
 
     $scope.costOptions = {
       'donation' : {
-        'flag' : true,
+        'flag' : false,
         'range' : { 'from': -1, 'to': -1 }
       },
       'free' : {
-        'flag' : true,
+        'flag' : false,
         'range' : { 'from': 0, 'to': 0 }
       },
       'one' : {
-        'flag' : true,
-        'range' : { 'from': 0, 'to': 20 }
+        'flag' : false,
+        'range' : { 'from': 1, 'to': 20 }
       },
       'two' : {
-        'flag' : true,
+        'flag' : false,
         'range' : { 'from': 20, 'to': 40 }
       },
       'three' : {
-        'flag' : true,
+        'flag' : false,
         'range' : { 'from': 40, 'to': 100 }
       },
       'four' : {
-        'flag' : true,
+        'flag' : false,
         'range' : { 'from': 100, 'to': 9999 }
       },
     };
     $scope.costFilter = function(my_event) {
+      $scope.allCosts = $scope.costOptions.donation.flag || $scope.costOptions.free.flag ||
+        $scope.costOptions.one.flag || $scope.costOptions.two.flag ||
+        $scope.costOptions.three.flag || $scope.costOptions.four.flag;
+      if ($scope.allCosts == false) {
+        return my_event;
+      }
       for (var key in $scope.costOptions) {
         if ($scope.costOptions[key].flag) {
           if (

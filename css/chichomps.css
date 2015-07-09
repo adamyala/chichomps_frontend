@@ -25,6 +25,10 @@ body {
   color: white;
 }
 
+.sidebar-nav li {
+  margin-top: 6px;
+}
+
 .filter-header {
   font-size: 18px;
 }
@@ -32,6 +36,10 @@ body {
 .checkbox {
   margin-top: 1px;
   margin-bottom: 1px;  
+}
+
+summary {
+  font-size: 18px;
 }
 
 /* Event styling */
