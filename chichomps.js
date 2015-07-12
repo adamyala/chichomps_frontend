@@ -44,6 +44,10 @@ angular.module('chichomps', ['ngRoute'])
       }
       return my_event;
     };
+    $scope.resetFilterCity = function() {
+      $scope.cityIncludes = [];
+      $('.city-box').attr('checked', false);
+    };
 
     $scope.categoryIncludes = [];
     $scope.categoryList = function(events) {
@@ -78,6 +82,10 @@ angular.module('chichomps', ['ngRoute'])
       }
       return;
     };
+    $scope.resetFilterCategory = function() {
+      $scope.categoryIncludes = [];
+      $('.category-box').attr('checked', false);
+    };
 
     $scope.sourceIncludes = [];
     $scope.sourceList = function(events) {
@@ -104,6 +112,10 @@ angular.module('chichomps', ['ngRoute'])
         }
       }
       return my_event;
+    };
+    $scope.resetFilterSource = function() {
+      $scope.sourceIncludes = [];
+      $('.source-box').attr('checked', false);
     };
 
     $scope.costOptions = {
@@ -150,6 +162,11 @@ angular.module('chichomps', ['ngRoute'])
         }
       };
       return;
+    };
+    $scope.resetFilterCost = function() {
+      for(cost in $scope.costOptions) {
+        $scope.costOptions[cost].flag = false;
+      }
     };
   })
 

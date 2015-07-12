@@ -12,7 +12,7 @@
     <li>
       <ul>
         <details>
-          <summary>Cost</summary>
+          <summary>Cost&nbsp;&nbsp;<a class="filter-reset" ng-click="resetFilterCost()">reset</a></summary>
           <li>
             <div class="checkbox">
               <label>
@@ -67,11 +67,11 @@
     <li>
       <ul>
         <details>
-          <summary>Category</summary>
+          <summary>Category&nbsp;&nbsp;<a class="filter-reset" ng-click="resetFilterCategory()">reset</a></summary>
           <li ng-repeat="category in categories">
             <div class="checkbox">
               <label>
-                <input type="checkbox" ng-click="includeCategory(category)">
+                <input  class="category-box" type="checkbox" ng-click="includeCategory(category)">
                 <span class="checkbox-material"><span class="check"></span></span> {{category}}
               </label>
             </div>
@@ -82,11 +82,11 @@
     <li>
       <ul>
         <details>
-          <summary>City</summary>
+          <summary>City&nbsp;&nbsp;<a class="filter-reset" ng-click="resetFilterCity()">reset</a></summary>
           <li ng-repeat="city in cities">
             <div class="checkbox">
               <label>
-                <input type="checkbox" ng-click="includeCity(city)">
+                <input class="city-box" type="checkbox" ng-click="includeCity(city)">
                 <span class="checkbox-material"><span class="check"></span></span> {{city}}
               </label>
             </div>
@@ -97,11 +97,11 @@
     <li>
       <ul>
         <details>
-          <summary>Source</summary>
+          <summary>Source&nbsp;&nbsp;<a class="filter-reset" ng-click="resetFilterSource()">reset</a></summary></summary>
           <li ng-repeat="source in sources">
             <div class="checkbox">
               <label>
-                <input type="checkbox" ng-click="includeSource(source)">
+                <input class="source-box" type="checkbox" ng-click="includeSource(source)">
                 <span class="checkbox-material"><span class="check"></span></span> {{source}}
               </label>
             </div>
