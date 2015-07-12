@@ -17,6 +17,19 @@ angular.module('chichomps', ['ngRoute'])
       }).
       error(function(data, status, headers, config) {}
     );
+    $scope.dropFooter = function(event_id) {
+      if ($(window).width() < 900) {
+        $('#event-footer-' + event_id).height(0);
+        $('#event-descrip-' + event_id).height(249);
+      }
+    };
+
+    $scope.dropDescrip = function(event_id) {
+      if ($(window).width() < 900) {
+        $('#event-footer-' + event_id).height(249);
+        $('#event-descrip-' + event_id).height(0);
+      }
+    };
 
     $scope.cityIncludes = [];
     $scope.cityList = function(events) {

@@ -245,6 +245,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.progress-striped {
+    margin-bottom: 0;
+}
+
 /* Sidebar styling */
 .sidebar-brand a {
   background-color: #1976D2;
@@ -257,10 +261,6 @@ body {
 
 #sidebar-wrapper li a {
   color: white;
-}
-
-.sidebar-nav li {
-  margin-top: 6px;
 }
 
 .filter-header {
@@ -353,9 +353,10 @@ img {
   transition: height 0.8s;
 }
 
-.event:hover .event-footer {
-  /* On hover, set the max-height to something large. In this case there's an obvious limit. */
-  height: 0;
+@media(min-width:900px) {
+    .event:hover .event-footer {
+      height: 0;
+    }
 }
 
 .event-place {
@@ -421,9 +422,11 @@ img {
   -moz-transition: height 0.8s;
   transition: height 0.8s;
 }
-.event:hover .event-descrip {
-  /* On hover, set the height to something large. In this case there's an obvious limit. */
-  height: 249px;
+@media(min-width:900px) {
+    .event:hover .event-descrip {
+      /* On hover, set the height to something large. In this case there's an obvious limit. */
+      height: 249px;
+    }
 }
 
 /* About page */
