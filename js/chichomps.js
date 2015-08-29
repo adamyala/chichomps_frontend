@@ -6,7 +6,7 @@ angular.module('chichomps', ['ngRoute'])
       // 'http://127.0.0.1:5000/v1.0/events',
       'http://chichomps.com/api/v1.0/events',
       {
-        headers: {'Authorization': 'Basic YWRhbXlhbGE6QnVpbHQgd2l0aCBsb3ZlIGluIENoaWNhZ28h'}
+        headers: {'Authorization': 'Basic ""'}
       }).
       success(function(data, status, headers, config) {
         $scope.events = data.events;
