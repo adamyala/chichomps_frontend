@@ -1,5 +1,4 @@
-// TODOS
-// choose indexOf or inArray
+
 (function(angular) {
 angular.module('chichomps', ['ngRoute'])
   .controller('eventsController', function($http, $scope) {
@@ -42,7 +41,7 @@ angular.module('chichomps', ['ngRoute'])
       return cities.sort();
     };
     $scope.includeCity = function(city) {
-      var i = $.inArray(city, $scope.cityIncludes);
+      var i = $scope.cityIncludes.indexOf(city);
       if (i > -1) {
           $scope.cityIncludes.splice(i, 1);
       } else {
@@ -51,7 +50,7 @@ angular.module('chichomps', ['ngRoute'])
     };
     $scope.cityFilter = function(my_event) {
       if ($scope.cityIncludes.length > 0) {
-        if ($.inArray(my_event.city, $scope.cityIncludes) < 0) {
+        if ($scope.cityIncludes.indexOf(my_event.city) < 0) {
           return;
         }
       }
@@ -75,7 +74,7 @@ angular.module('chichomps', ['ngRoute'])
       return categories.sort();
     };
     $scope.includeCategory = function(category) {
-      var i = $.inArray(category, $scope.categoryIncludes);
+      var i = $scope.categoryIncludes.indexOf(category);
       if (i > -1) {
           $scope.categoryIncludes.splice(i, 1);
       } else {
@@ -111,7 +110,7 @@ angular.module('chichomps', ['ngRoute'])
       return sources.sort();
     };
     $scope.includeSource = function(source) {
-      var i = $.inArray(source, $scope.sourceIncludes);
+      var i = $scope.sourceIncludes.indexOf(source);
       if (i > -1) {
           $scope.sourceIncludes.splice(i, 1);
       } else {
@@ -120,7 +119,7 @@ angular.module('chichomps', ['ngRoute'])
     };
     $scope.sourceFilter = function(my_event) {
       if ($scope.sourceIncludes.length > 0) {
-        if ($.inArray(my_event.source, $scope.sourceIncludes) < 0) {
+        if ($scope.sourceIncludes.indexOf(my_event.source) < 0) {
           return;
         }
       }
