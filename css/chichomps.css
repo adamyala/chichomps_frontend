@@ -16,6 +16,12 @@ body {
   background-color: #1976D2;
 }
 
+.sidebar-nav > .sidebar-brand {
+  margin-top: 0px;
+  background-color: #1976D2;
+}
+
+
 #sidebar-wrapper {
   background-color: #2196F3;
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
@@ -40,6 +46,13 @@ body {
 
 summary {
   font-size: 18px;
+  cursor: pointer;
+}
+
+.filter-reset {
+  font-size: 14px;
+  vertical-align: middle;
+  display: inline;
 }
 
 /* Event styling */
