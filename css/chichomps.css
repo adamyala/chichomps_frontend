@@ -209,3 +209,36 @@ img {
   max-width: 800px;
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
 }
+
+/* Loading message */
+.loading {
+  color: white;
+  margin-right: auto;
+  margin-left: auto;
+  display: table;
+}
+
+.fa-spin-custom, .glyphicon-spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}

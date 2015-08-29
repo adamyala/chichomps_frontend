@@ -1,5 +1,8 @@
 <div class="event-deck">
-  <div ng-repeat="event in events | filter:cityFilter | filter:costFilter | filter:categoryFilter | filter:sourceFilter" class="event">
+  <div ng-hide="events" class="loading">
+    <h3>Finding you foodie events... <i class="mdi-action-cached glyphicon-spin"></i></h3>
+  </div>
+  <div ng-show="events" ng-repeat="event in events | filter:cityFilter | filter:costFilter | filter:categoryFilter | filter:sourceFilter" class="event">
     <div ng-click="dropFooter(event.id)" class="event-header">
       <div class="event-name">{{event.name}}</div>
       <div class="event-date">{{event.date}}</div>
