@@ -1,0 +1,22 @@
+{
+  "name": "chichomps_frontend",
+  "homepage": "https://github.com/adamyala/chichomps_frontend",
+  "authors": [
+    "Adam Yala <adam@adamyala.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ng-tags-input": "^3.1.1",
+    "angular-daterangepicker": "^0.2.2",
+    "jquery-date-range-picker": "^0.5.1"
+  }
+}

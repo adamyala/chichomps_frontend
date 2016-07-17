@@ -1,1 +1,4 @@
 *.png
+.sass-cache/
+.DS_Store
+bower_components/

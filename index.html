@@ -1,47 +1,42 @@
-<!doctype html>
-<html ng-app="chichomps" ng-controller="eventsController">
+<!DOCTYPE html>
+<html ng-app="plunker">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Chichomps | Chicago Food Events</title>
-    <meta name="description" content="Chichomps was created in 2015 to be the largest online source of Chicago food events.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <script async src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-route.min.js"></script>
-    <script src="js/chichomps.js"></script>
-
-    <link rel="icon" type="image/png" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/roboto.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/simple-sidebar.css">
-    <link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css">
-    <link rel="stylesheet" type="text/css" href="css/material-fullpalette.min.css">
-    <link rel="stylesheet" type="text/css" href="css/material.min.css">
-    <link rel="stylesheet" type="text/css" href="css/ripples.min.css">
-    <link rel="stylesheet" type="text/css" href="css/chichomps.css">
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-60708720-1', 'auto');
-      ga('send', 'pageview');
-    </script>
+    <title></title>
+    <!-- <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.min.css"> -->
+    <link rel="stylesheet" href="bower_components/jquery-date-range-picker/dist/daterangepicker.min.css">
   </head>
-  <body>
-    <div id="wrapper">
-      <div ng-include="'nav.html'"></div>
-      <div id="page-content-wrapper">
-        <div ng-view></div>
-      </div>
-    </div>
+  <body ng-controller="MainCtrl">
+    <tags-input ng-model="location" add-on-paste="true">
+      <auto-complete
+        source="loadLocations($query)"
+        min-length="0"
+        load-on-focus="true"
+        load-on-empty="true"
+      ></auto-complete>
+    </tags-input>
+
+    <tags-input ng-model="category" add-on-paste="true">
+      <auto-complete
+        source="loadCategories($query)"
+        min-length="0"
+        load-on-focus="true"
+        load-on-empty="true"
+      ></auto-complete>
+    </tags-input>
+
+    <input id="dom-id"/>
+
+    <select>
+      <option>All Times</option>
+      <option>Before Noon</option>
+      <option>Noon to 6pm</option>
+      <option>After 6pm</option>
+    </select>
   </body>
-  <script type="text/javascript">
-    function toggleMenu() {
-      $("#wrapper").toggleClass("toggled");
-    }
-  </script>
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+  <script type="text/javascript" src="bower_components/jquery-date-range-picker/dist/jquery.daterangepicker.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
 </html>
